@@ -1,0 +1,8 @@
+{
+  "name": "AetherVoice",
+  "description": "A futuristic AI Agent platform for emotional companionship, education, and entertainment, featuring a rich community and creator tools.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
