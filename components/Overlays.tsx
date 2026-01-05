@@ -32,7 +32,7 @@ export const CallInterface = ({ agent, onClose }: { agent: Agent, onClose: () =>
   const handleExtractAudio = () => { /* Mock download */ };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-slate-900 text-white flex flex-col overflow-hidden animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-[100] bg-slate-950 text-white flex flex-col overflow-hidden animate-in fade-in duration-300">
       <div className={`absolute inset-0 opacity-40 ${agent.image3d} blur-[100px]`}></div>
       <div className="relative z-10 flex justify-between items-center p-6">
         <div className="flex items-center gap-3">
@@ -85,21 +85,21 @@ export const AgentDetailModal = ({ agent, onClose, onStartCall }: { agent: Agent
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick={onClose}></div>
-      <div className="w-full max-w-5xl h-[90vh] md:h-[85vh] bg-white rounded-3xl shadow-2xl z-10 flex flex-col md:flex-row overflow-hidden animate-in zoom-in-95 duration-200 relative">
-        <div className="w-full md:w-[400px] h-64 md:h-auto bg-slate-100 relative group flex-shrink-0">
+      <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm transition-opacity" onClick={onClose}></div>
+      <div className="w-full max-w-5xl h-[90vh] md:h-[85vh] bg-slate-900 rounded-3xl shadow-2xl z-10 flex flex-col md:flex-row overflow-hidden animate-in zoom-in-95 duration-200 relative border border-slate-800">
+        <div className="w-full md:w-[400px] h-64 md:h-auto bg-slate-800 relative group flex-shrink-0">
            <img src={agent.avatar} alt={agent.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/10"></div>
            <div className="absolute top-4 left-4 z-20">
-              <button onClick={onClose} className="p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors border border-white/10"><X size={20} /></button>
+              <button onClick={onClose} className="p-2 bg-black/40 hover:bg-black/60 text-white rounded-full backdrop-blur-md transition-colors border border-white/10"><X size={20} /></button>
            </div>
            <div className="absolute top-4 right-4 z-20 flex gap-2">
-              <button className="p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors border border-white/10" title="查看3D立绘"><User size={18} /></button>
-              <button className="p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors border border-white/10" title="查看视频"><Film size={18} /></button>
+              <button className="p-2 bg-black/40 hover:bg-black/60 text-white rounded-full backdrop-blur-md transition-colors border border-white/10" title="查看3D立绘"><User size={18} /></button>
+              <button className="p-2 bg-black/40 hover:bg-black/60 text-white rounded-full backdrop-blur-md transition-colors border border-white/10" title="查看视频"><Film size={18} /></button>
            </div>
            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white z-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-2">{agent.name}</h2>
-              <p className="text-indigo-200 font-medium text-base md:text-lg mb-4">{agent.tagline}</p>
+              <p className="text-indigo-300 font-medium text-base md:text-lg mb-4">{agent.tagline}</p>
               <div className="flex items-center gap-4 mb-6 text-sm opacity-90">
                  <div className="flex items-center gap-1"><Users size={16} /> {agent.stats.users} 关注</div>
                  <div className="flex items-center gap-1"><Heart size={16} /> 4.2w 收藏</div>
@@ -107,21 +107,21 @@ export const AgentDetailModal = ({ agent, onClose, onStartCall }: { agent: Agent
               <button onClick={onStartCall} className="w-full py-3 md:py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-bold hover:shadow-lg hover:shadow-indigo-500/30 transition-all flex items-center justify-center gap-2 group/btn"><Phone size={20} className="group-hover/btn:animate-bounce" /> 立即通话</button>
            </div>
         </div>
-        <div className="flex-1 flex flex-col bg-white overflow-hidden relative">
-           <div className="px-6 md:px-8 pt-6 pb-0 border-b border-gray-100 flex-shrink-0">
+        <div className="flex-1 flex flex-col bg-slate-900 overflow-hidden relative">
+           <div className="px-6 md:px-8 pt-6 pb-0 border-b border-slate-800 flex-shrink-0">
               <div className="flex items-center justify-between mb-6">
-                 <div className="flex gap-2">{agent.tags.map(tag => (<span key={tag} className="px-3 py-1 bg-slate-100 text-slate-600 rounded-lg text-xs font-bold">#{tag}</span>))}</div>
+                 <div className="flex gap-2">{agent.tags.map(tag => (<span key={tag} className="px-3 py-1 bg-slate-800 text-slate-400 rounded-lg text-xs font-bold border border-slate-700">#{tag}</span>))}</div>
                  <div className="flex gap-2">
-                    <button className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-all"><MessageSquare size={20} /></button>
-                    <button className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-all"><Share2 size={20} /></button>
-                    <button className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-all"><Settings size={20} /></button>
+                    <button className="p-2 text-slate-500 hover:text-indigo-400 hover:bg-slate-800 rounded-full transition-all"><MessageSquare size={20} /></button>
+                    <button className="p-2 text-slate-500 hover:text-indigo-400 hover:bg-slate-800 rounded-full transition-all"><Share2 size={20} /></button>
+                    <button className="p-2 text-slate-500 hover:text-indigo-400 hover:bg-slate-800 rounded-full transition-all"><Settings size={20} /></button>
                  </div>
               </div>
               <div className="flex gap-6 md:gap-8 overflow-x-auto scrollbar-hide">
                  {TABS.map(tab => (
-                    <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`pb-4 text-sm font-bold relative transition-colors whitespace-nowrap ${activeTab === tab.id ? 'text-indigo-600' : 'text-slate-400 hover:text-slate-600'}`}>
+                    <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`pb-4 text-sm font-bold relative transition-colors whitespace-nowrap ${activeTab === tab.id ? 'text-indigo-400' : 'text-slate-500 hover:text-slate-300'}`}>
                        {tab.label}
-                       {activeTab === tab.id && (<div className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-600 rounded-t-full"></div>)}
+                       {activeTab === tab.id && (<div className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-500 rounded-t-full"></div>)}
                     </button>
                  ))}
               </div>
@@ -129,40 +129,40 @@ export const AgentDetailModal = ({ agent, onClose, onStartCall }: { agent: Agent
            <div className="flex-1 overflow-y-auto p-6 md:p-8 custom-scrollbar">
               {activeTab === 'overview' && (
                  <div className="space-y-8 animate-in slide-in-from-right-4 duration-300">
-                    <section><h3 className="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2"><Sparkles size={16} className="text-indigo-500"/> Agent 简介</h3><p className="text-slate-600 leading-relaxed text-sm">{agent.desc}</p></section>
-                    <section className="bg-slate-50 rounded-xl p-4 border border-slate-100"><h3 className="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2"><Zap size={16} className="text-amber-500"/> Prompt 设定 (部分预览)</h3><div className="relative"><p className="font-mono text-xs text-slate-500 leading-relaxed bg-white p-3 rounded-lg border border-slate-200">{agent.prompts}<br/><br/>[系统指令隐藏中...]</p><div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white via-white/80 to-transparent flex items-end justify-center pb-2"><span className="text-xs text-indigo-600 font-bold cursor-pointer hover:underline">解锁查看完整设定</span></div></div></section>
+                    <section><h3 className="text-sm font-bold text-slate-200 mb-3 flex items-center gap-2"><Sparkles size={16} className="text-indigo-500"/> Agent 简介</h3><p className="text-slate-400 leading-relaxed text-sm">{agent.desc}</p></section>
+                    <section className="bg-slate-800/50 rounded-xl p-4 border border-slate-800"><h3 className="text-sm font-bold text-slate-200 mb-3 flex items-center gap-2"><Zap size={16} className="text-amber-500"/> Prompt 设定 (部分预览)</h3><div className="relative"><p className="font-mono text-xs text-slate-500 leading-relaxed bg-slate-900 p-3 rounded-lg border border-slate-700">{agent.prompts}<br/><br/>[系统指令隐藏中...]</p><div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-slate-800/50 via-slate-800/40 to-transparent flex items-end justify-center pb-2"><span className="text-xs text-indigo-400 font-bold cursor-pointer hover:underline">解锁查看完整设定</span></div></div></section>
                     <section>
-                       <h3 className="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2"><Music size={16} className="text-rose-500"/> 声音特征</h3>
+                       <h3 className="text-sm font-bold text-slate-200 mb-3 flex items-center gap-2"><Music size={16} className="text-rose-500"/> 声音特征</h3>
                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-white border border-slate-100 p-3 rounded-xl shadow-sm"><div className="text-xs text-slate-400 mb-2">音色</div><div className="flex items-center justify-between text-sm font-bold text-slate-700">温柔御姐音 <Play size={14} className="text-indigo-500"/></div></div>
-                          <div className="bg-white border border-slate-100 p-3 rounded-xl shadow-sm"><div className="text-xs text-slate-400 mb-2">语速</div><div className="w-full bg-slate-100 h-2 rounded-full mt-2 overflow-hidden"><div className="bg-green-400 h-full w-[60%]"></div></div></div>
+                          <div className="bg-slate-800/50 border border-slate-800 p-3 rounded-xl shadow-sm"><div className="text-xs text-slate-500 mb-2">音色</div><div className="flex items-center justify-between text-sm font-bold text-slate-300">温柔御姐音 <Play size={14} className="text-indigo-500"/></div></div>
+                          <div className="bg-slate-800/50 border border-slate-800 p-3 rounded-xl shadow-sm"><div className="text-xs text-slate-500 mb-2">语速</div><div className="w-full bg-slate-900 h-2 rounded-full mt-2 overflow-hidden"><div className="bg-green-500 h-full w-[60%]"></div></div></div>
                        </div>
                     </section>
                  </div>
               )}
               {activeTab === 'gallery' && (
                  <div className="animate-in slide-in-from-right-4 duration-300">
-                    <h3 className="text-sm font-bold text-slate-900 mb-4">照片墙 & 视频</h3>
+                    <h3 className="text-sm font-bold text-slate-200 mb-4">照片墙 & 视频</h3>
                     <div className="grid grid-cols-3 gap-3">
-                       {[1,2,3,4,5,6].map((item) => (<div key={item} className="aspect-square bg-slate-200 rounded-xl overflow-hidden relative group cursor-pointer"><img src={`https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=80`} className="w-full h-full object-cover transition-transform group-hover:scale-110" alt="gallery" />{item % 2 === 0 && (<div className="absolute top-2 right-2 w-6 h-6 bg-black/50 rounded-full flex items-center justify-center text-white backdrop-blur-sm"><Film size={12} /></div>)}</div>))}
+                       {[1,2,3,4,5,6].map((item) => (<div key={item} className="aspect-square bg-slate-800 rounded-xl overflow-hidden relative group cursor-pointer"><img src={`https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=80`} className="w-full h-full object-cover transition-transform group-hover:scale-110" alt="gallery" />{item % 2 === 0 && (<div className="absolute top-2 right-2 w-6 h-6 bg-black/50 rounded-full flex items-center justify-center text-white backdrop-blur-sm"><Film size={12} /></div>)}</div>))}
                     </div>
                  </div>
               )}
               {activeTab === 'history' && (
                  <div className="animate-in slide-in-from-right-4 duration-300 space-y-4">
-                    <div className="flex items-center justify-between bg-indigo-50 p-4 rounded-xl border border-indigo-100"><div className="flex items-center gap-3"><div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600"><Clock size={20} /></div><div><div className="text-sm font-bold text-indigo-900">历史回顾功能</div><div className="text-xs text-indigo-600">免费支持查看最近7天记录</div></div></div><button className="px-3 py-1.5 bg-white text-indigo-600 text-xs font-bold rounded-lg border border-indigo-200 shadow-sm">升级会员</button></div>
+                    <div className="flex items-center justify-between bg-indigo-900/20 p-4 rounded-xl border border-indigo-900/50"><div className="flex items-center gap-3"><div className="w-10 h-10 bg-indigo-900/50 rounded-full flex items-center justify-center text-indigo-400"><Clock size={20} /></div><div><div className="text-sm font-bold text-indigo-200">历史回顾功能</div><div className="text-xs text-indigo-400">免费支持查看最近7天记录</div></div></div><button className="px-3 py-1.5 bg-slate-800 text-indigo-400 text-xs font-bold rounded-lg border border-indigo-900/50 shadow-sm hover:bg-slate-700">升级会员</button></div>
                     <div className="space-y-2">
                        {historyData.map((record) => (
-                          <div key={record.id} className="flex items-center justify-between p-4 bg-white border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
-                             <div className="flex items-center gap-4"><div className={`w-2 h-2 rounded-full ${record.type === 'expired' ? 'bg-slate-300' : 'bg-green-500'}`}></div><div><div className="text-sm font-bold text-slate-700">{record.date}</div><div className="text-xs text-slate-400">通话时长: {record.duration}</div></div></div>
-                             {record.type === 'expired' ? (<button className="text-slate-300 cursor-not-allowed"><Lock size={18}/></button>) : (<button className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-50 text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"><Play size={16} fill="currentColor"/></button>)}
+                          <div key={record.id} className="flex items-center justify-between p-4 bg-slate-800/30 border border-slate-800 rounded-xl hover:bg-slate-800/50 transition-colors">
+                             <div className="flex items-center gap-4"><div className={`w-2 h-2 rounded-full ${record.type === 'expired' ? 'bg-slate-600' : 'bg-green-500'}`}></div><div><div className="text-sm font-bold text-slate-300">{record.date}</div><div className="text-xs text-slate-500">通话时长: {record.duration}</div></div></div>
+                             {record.type === 'expired' ? (<button className="text-slate-600 cursor-not-allowed"><Lock size={18}/></button>) : (<button className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-800 text-slate-500 hover:bg-indigo-900/50 hover:text-indigo-400 transition-colors"><Play size={16} fill="currentColor"/></button>)}
                           </div>
                        ))}
                     </div>
                  </div>
               )}
               {activeTab === 'comments' && (
-                 <div className="animate-in slide-in-from-right-4 duration-300"><h3 className="text-sm font-bold text-slate-900 mb-4">用户评价 (1.2w)</h3><div className="space-y-6">{[1,2,3].map(i => (<div key={i} className="flex gap-3"><div className="w-8 h-8 rounded-full bg-slate-200 overflow-hidden flex-shrink-0"><img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i * 5}`} alt="avatar" /></div><div><div className="flex items-center gap-2 mb-1"><span className="text-xs font-bold text-slate-700">CyberUser_{i}99</span><span className="text-[10px] text-slate-400">2小时前</span></div><p className="text-sm text-slate-600 mb-2">真的非常治愈！Seraphina的声音听起来完全不像AI，昨晚聊了很久，感觉心情好多了。推荐大家试试！</p><div className="flex items-center gap-4"><button className="text-xs text-slate-400 hover:text-rose-500 flex items-center gap-1"><ThumbsUp size={12} /> 124</button><button className="text-xs text-slate-400 hover:text-indigo-500">回复</button></div></div></div>))}</div></div>
+                 <div className="animate-in slide-in-from-right-4 duration-300"><h3 className="text-sm font-bold text-slate-200 mb-4">用户评价 (1.2w)</h3><div className="space-y-6">{[1,2,3].map(i => (<div key={i} className="flex gap-3"><div className="w-8 h-8 rounded-full bg-slate-700 overflow-hidden flex-shrink-0"><img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i * 5}`} alt="avatar" /></div><div><div className="flex items-center gap-2 mb-1"><span className="text-xs font-bold text-slate-300">CyberUser_{i}99</span><span className="text-[10px] text-slate-500">2小时前</span></div><p className="text-sm text-slate-400 mb-2">真的非常治愈！Seraphina的声音听起来完全不像AI，昨晚聊了很久，感觉心情好多了。推荐大家试试！</p><div className="flex items-center gap-4"><button className="text-xs text-slate-500 hover:text-rose-500 flex items-center gap-1"><ThumbsUp size={12} /> 124</button><button className="text-xs text-slate-500 hover:text-indigo-400">回复</button></div></div></div>))}</div></div>
               )}
            </div>
         </div>

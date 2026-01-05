@@ -20,9 +20,9 @@ const GlobalStyles = () => (
     .duration-700 { animation-duration: 700ms; }
     
     .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
-    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; } /* slate-950 */
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; } /* slate-700 */
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #475569; } /* slate-600 */
   `}</style>
 );
 

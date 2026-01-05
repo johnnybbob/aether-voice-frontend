@@ -17,7 +17,7 @@ export const MOCK_AGENTS: Agent[] = [
     id: '1',
     name: 'Seraphina',
     tagline: '你的赛博朋克心理咨询师',
-    avatar: 'https://images.unsplash.com/photo-1642425149556-b6f90e9568d2?w=400&h=400&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1615752391629-847291a18204?q=80&w=600&auto=format&fit=crop', // Cyberpunk female
     image3d: 'bg-gradient-to-b from-indigo-500 to-purple-600',
     tags: ['心理疗愈', '赛博朋克', '温柔'],
     category: 'healing',
@@ -29,7 +29,7 @@ export const MOCK_AGENTS: Agent[] = [
     id: '2',
     name: 'Atlas',
     tagline: '通晓古今的历史向导',
-    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=400&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1634925828854-522615372332?q=80&w=600&auto=format&fit=crop', // Dark fantasy warrior/scholar
     image3d: 'bg-gradient-to-b from-slate-600 to-slate-800',
     tags: ['教育培训', '历史', '沉稳'],
     category: 'edu',
@@ -41,7 +41,7 @@ export const MOCK_AGENTS: Agent[] = [
     id: '3',
     name: 'Mio',
     tagline: '元气满满的二次元玩伴',
-    avatar: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&h=400&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1596700010902-6c24364172f3?q=80&w=600&auto=format&fit=crop', // Anime cosplay style
     image3d: 'bg-gradient-to-b from-pink-400 to-rose-500',
     tags: ['情感陪伴', '傲娇', '游戏'],
     category: 'emotion',
@@ -52,37 +52,37 @@ export const MOCK_AGENTS: Agent[] = [
 ];
 
 export const VIDEO_FEED: Video[] = [
-  { id: 1, title: 'Seraphina 翻唱《Legend》', author: 'User_992', views: '23W', cover: 'bg-indigo-200' },
-  { id: 2, title: 'Atlas 讲解罗马帝国的衰亡', author: 'HistoryBuff', views: '15W', cover: 'bg-slate-300' },
-  { id: 3, title: 'Mio 的早安叫醒服务', author: 'MioOfficial', views: '89W', cover: 'bg-pink-200' },
-  { id: 4, title: '如何用 Agent 制作播客', author: 'TechGuru', views: '5W', cover: 'bg-blue-200' },
+  { id: 1, title: 'Seraphina 翻唱《Legend》', author: 'User_992', views: '23W', cover: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=800&auto=format&fit=crop' },
+  { id: 2, title: 'Atlas 讲解罗马帝国的衰亡', author: 'HistoryBuff', views: '15W', cover: 'https://images.unsplash.com/photo-1564399580075-5dfe19c205f3?q=80&w=800&auto=format&fit=crop' },
+  { id: 3, title: 'Mio 的早安叫醒服务', author: 'MioOfficial', views: '89W', cover: 'https://images.unsplash.com/photo-1580234550995-17482f5b40d6?q=80&w=800&auto=format&fit=crop' },
+  { id: 4, title: '如何用 Agent 制作播客', author: 'TechGuru', views: '5W', cover: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=800&auto=format&fit=crop' },
 ];
 
 export const VIDEO_PLAZA_DATA: Video[] = [
-  { id: 101, title: '【Seraphina】深夜电台：关于孤独的哲学思考', author: 'CyberPhilosopher', views: '45W', duration: '12:30', cover: 'bg-indigo-800', agentId: '1' },
-  { id: 102, title: 'Mio 带你云游《赛博朋克2077》夜之城', author: 'GameMaster_X', views: '102W', duration: '08:45', cover: 'bg-pink-600', agentId: '3' },
-  { id: 103, title: 'Atlas 讲史：拿破仑的滑铁卢真相', author: 'History_Archive', views: '33W', duration: '15:20', cover: 'bg-slate-700', agentId: '2' },
-  { id: 104, title: 'Seraphina ASMR：赛博雨夜助眠', author: 'SleepWell', views: '88W', duration: '45:00', cover: 'bg-indigo-900', agentId: '1' },
-  { id: 105, title: 'Mio 的傲娇语音包试听（含隐藏彩蛋）', author: 'VoiceLover', views: '56W', duration: '03:10', cover: 'bg-rose-400', agentId: '3' },
-  { id: 106, title: 'Atlas：如果罗马没有灭亡？架空历史推演', author: 'WhatIf_Channel', views: '21W', duration: '22:15', cover: 'bg-slate-600', agentId: '2' },
+  { id: 101, title: '【Seraphina】深夜电台：关于孤独的哲学思考', author: 'CyberPhilosopher', views: '45W', duration: '12:30', cover: 'https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?q=80&w=800&auto=format&fit=crop', agentId: '1' },
+  { id: 102, title: 'Mio 带你云游《赛博朋克2077》夜之城', author: 'GameMaster_X', views: '102W', duration: '08:45', cover: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=800&auto=format&fit=crop', agentId: '3' },
+  { id: 103, title: 'Atlas 讲史：拿破仑的滑铁卢真相', author: 'History_Archive', views: '33W', duration: '15:20', cover: 'https://images.unsplash.com/photo-1597950337860-64b36006e897?q=80&w=800&auto=format&fit=crop', agentId: '2' },
+  { id: 104, title: 'Seraphina ASMR：赛博雨夜助眠', author: 'SleepWell', views: '88W', duration: '45:00', cover: 'https://images.unsplash.com/photo-1515630278258-407f66498911?q=80&w=800&auto=format&fit=crop', agentId: '1' },
+  { id: 105, title: 'Mio 的傲娇语音包试听（含隐藏彩蛋）', author: 'VoiceLover', views: '56W', duration: '03:10', cover: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop', agentId: '3' },
+  { id: 106, title: 'Atlas：如果罗马没有灭亡？架空历史推演', author: 'WhatIf_Channel', views: '21W', duration: '22:15', cover: 'https://images.unsplash.com/photo-1550100136-e074fa714874?q=80&w=800&auto=format&fit=crop', agentId: '2' },
 ];
 
 export const LIVE_FEED: LiveStream[] = [
   { 
     id: 1, title: 'Seraphina · 赛博情绪电台', host: 'Seraphina', viewers: '2.3W', 
-    cover: 'bg-gradient-to-br from-indigo-500 to-purple-500', tag: '情感陪伴'
+    cover: 'https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=800&auto=format&fit=crop', tag: '情感陪伴'
   },
   { 
     id: 2, title: 'Atlas · 历史冷知识夜聊局', host: 'Atlas', viewers: '1.1W', 
-    cover: 'bg-gradient-to-br from-slate-700 to-slate-500', tag: '历史解说'
+    cover: 'https://images.unsplash.com/photo-1461360370896-922624d12aa1?q=80&w=800&auto=format&fit=crop', tag: '历史解说'
   },
   { 
     id: 3, title: 'Mio · 开黑唠嗑房', host: 'Mio', viewers: '8.9W', 
-    cover: 'bg-gradient-to-br from-pink-500 to-rose-500', tag: '游戏陪玩'
+    cover: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop', tag: '游戏陪玩'
   },
   { 
     id: 4, title: '新手创作者试音房', host: '新人创作者', viewers: '3.2K', 
-    cover: 'bg-gradient-to-br from-blue-400 to-cyan-400', tag: '试音体验'
+    cover: 'https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?q=80&w=800&auto=format&fit=crop', tag: '试音体验'
   },
 ];
 
@@ -107,7 +107,7 @@ export const BANNERS: Banner[] = [
     tag: '官方活动 · 赛博音乐节',
     title: '与顶流 AI 偶像\n一起创造未来的声音',
     desc: '参与创作挑战，赢取限定音色包与 PRO 会员权益。',
-    bgGradient: 'from-indigo-900 via-indigo-600 to-purple-500',
+    bgGradient: 'from-indigo-900 via-indigo-800 to-purple-900',
     decorativeCircle: 'bg-rose-500/20',
     posterTitle: 'CYBER MUSIC FEST 2077',
     posterSubtitle: '未来之声 · 虚拟偶像盛典',
@@ -118,7 +118,7 @@ export const BANNERS: Banner[] = [
     tag: '社区联谊 · 心动信号',
     title: '寻找你的\n灵魂契合 Agent',
     desc: '限时开启匹配模式，测测你与哪位 AI 的相性最高。',
-    bgGradient: 'from-pink-600 via-rose-500 to-orange-400',
+    bgGradient: 'from-pink-900 via-rose-800 to-orange-900',
     decorativeCircle: 'bg-indigo-500/20',
     posterTitle: 'HEART SIGNAL',
     posterSubtitle: 'AI 恋爱契合度测试 · 限时开启',
@@ -129,7 +129,7 @@ export const BANNERS: Banner[] = [
     tag: '大师课 · 零基础教学',
     title: '打造专属于你的\n超级智能体',
     desc: '7天速成班，从 Prompt 工程到性格调优全解析。',
-    bgGradient: 'from-blue-900 via-blue-600 to-cyan-500',
+    bgGradient: 'from-blue-900 via-blue-800 to-cyan-900',
     decorativeCircle: 'bg-yellow-500/20',
     posterTitle: 'MASTER CLASS',
     posterSubtitle: 'AI Agent 创作者训练营',
